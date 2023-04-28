@@ -1,5 +1,5 @@
 /**
- * @file 3_旋转数组.cpp
+ * @file 3.旋转数组.cpp
  * @author whx (huxinwang021@gmail.com)
  * @brief 
  *  给你一个数组，将数组中的元素向右轮转 k 个位置，其中 k 是非负数。
@@ -81,10 +81,8 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
-void printArray(int arr[], int length)
-{
-    for (int i = 0; i < length; ++i)
-    {
+void printArray(int arr[], int length) {
+    for (int i = 0; i < length; ++i) {
         cout << "array[" << i << "] = " << arr[i] << endl;
     }
 }

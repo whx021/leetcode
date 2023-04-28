@@ -1,15 +1,10 @@
-/**
- * @file 21_合并两个有序链表.cpp
- * @author whx (huxinwang021@gmail.com)
- * @brief
- *  将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
- * @version 0.1
- * @date 2023-03-25
+/*
+ * @lc app=leetcode.cn id=21 lang=cpp
  *
- * @copyright Copyright (c) 2023
- *
+ * [21] 合并两个有序链表
  */
 
+// @lc code=start
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -20,6 +15,27 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        ListNode* preHead = new ListNode(-1);   // 哑节点 : 作为头节点, 简化边界问题
+
+        ListNode* prev = preHead;
+        while (list1 != nullptr && list2 != nullptr) {
+            if (list1->val < list2->val) {
+                prev->next = list1;
+                list1 = list1->next;
+            } else {
+                prev->next = list2;
+                list2 = list2->next;
+            }
+            prev = prev->next;  
+        }
+        prev->next = (list1 == nullptr ? list2 : list1);
+        return preHead->next;
+    }
+};
+// @lc code=end
 
 struct ListNode {
     int val;
