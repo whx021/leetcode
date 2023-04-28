@@ -30,8 +30,7 @@ public:
         }
         if (!bracket_stack.empty()) {
             return false;
-        }
-        else {
+        } else {
             return true;
         }
     }
@@ -39,14 +38,11 @@ public:
     bool isValid(const char& left_bracket, const char& right_bracket) {
         if (left_bracket == '(' && right_bracket == ')') {
             return true;
-        }
-        else if (left_bracket == '[' && right_bracket == ']') {
+        } else if (left_bracket == '[' && right_bracket == ']') {
             return true;
-        }
-        else if (left_bracket == '{' && right_bracket == '}') {
+        } else if (left_bracket == '{' && right_bracket == '}') {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
@@ -76,8 +72,7 @@ public:
         }
         if (!bracket_stack.empty()) {
             return false;
-        }
-        else {
+        } else {
             return true;
         }
     }
@@ -85,14 +80,11 @@ public:
     bool isValid(const char& left_bracket, const char& right_bracket) {
         if (left_bracket == '(' && right_bracket == ')') {
             return true;
-        }
-        else if (left_bracket == '[' && right_bracket == ']') {
+        } else if (left_bracket == '[' && right_bracket == ']') {
             return true;
-        }
-        else if (left_bracket == '{' && right_bracket == '}') {
+        } else if (left_bracket == '{' && right_bracket == '}') {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }

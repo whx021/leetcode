@@ -14,14 +14,11 @@ public:
         while (p1 >= 0 || p2 >= 0) {
             if (p1 == -1) {
                 nums1[tail--] = nums2[p2--];
-            }
-            else if (p2 == -1) {
+            } else if (p2 == -1) {
                 nums1[tail--] = nums1[p1--];
-            }
-            else if (nums1[p1] > nums2[p2]) {
+            } else if (nums1[p1] > nums2[p2]) {
                 nums1[tail--] = nums1[p1--];
-            }
-            else {
+            } else {
                 nums1[tail--] = nums2[p2--];
             }
         }
@@ -37,14 +34,11 @@ public:
         while (p1 >= 0 || p2 >= 0) {
             if (p1 == -1) {
                 nums1[tail--] = nums2[p2--];
-            }
-            else if (p2 == -1) {
+            } else if (p2 == -1) {
                 nums1[tail--] = nums1[p1--];
-            }
-            else if (nums1[p1] > nums2[p2]) {
+            } else if (nums1[p1] > nums2[p2]) {
                 nums1[tail--] = nums1[p1--];
-            }
-            else {
+            } else {
                 nums1[tail--] = nums2[p2--];
             }
         }

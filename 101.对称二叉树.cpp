@@ -21,14 +21,11 @@ public:
     bool check(TreeNode* p, TreeNode* q) {
         if (p == nullptr && q == nullptr) {
             return true;
-        }
-        else if (p == nullptr || q == nullptr) {
+        } else if (p == nullptr || q == nullptr) {
             return false;
-        }
-        else if (p->val != q->val) {
+        } else if (p->val != q->val) {
             return false;
-        }
-        else {
+        } else {
             return check(p->left, q->right) && check(p->right, q->left);
         }
     }
@@ -52,14 +49,11 @@ public:
     bool check(TreeNode* p, TreeNode* q) {
         if (p == nullptr && q == nullptr) {
             return true;
-        }
-        else if (p == nullptr || q == nullptr) {
+        } else if (p == nullptr || q == nullptr) {
             return false;
-        }
-        else if (p->val != q->val) {
+        } else if (p->val != q->val) {
             return false;
-        }
-        else {
+        } else {
             return check(p->left, q->right) && check(p->right, q->left);
         }
     }
